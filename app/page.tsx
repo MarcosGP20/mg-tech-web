@@ -2,12 +2,14 @@ import Image from "next/image";
 import Container from "@/components/ui/shared/Container";
 import Hero from "@/components/ui/features/Hero";
 import ProjectCard from "@/components/ui/features/ProjectCard";
+import Services from "@/components/ui/features/Services";
 
 export default function Home() {
   return (
     <main>
       <Container>
         <Hero />
+        <Services />
         <section className="py-20">
           <div className="flex flex-col mb-12">
             <h2 className="text-3xl font-bold text-zinc-900">

@@ -37,7 +37,7 @@ export default function Navbar() {
           {/* CTA Principal */}
           <div className="flex items-center gap-4">
             <Button variant="default" size="sm" className="hidden sm:flex">
-              Auditoría Gratis
+              Consulta Gratis
             </Button>
 
             {/* Aquí iría el botón de menú móvil más adelante */}
