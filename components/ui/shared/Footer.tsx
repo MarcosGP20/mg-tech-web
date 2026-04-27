@@ -67,7 +67,9 @@ export default function Footer() {
                 <Linkedin size={20} />
               </a>
               <a
-                href="https://wa.me/tu-numero"
+                href="https://wa.me/5493517692071"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="p-2 bg-zinc-900 rounded-full hover:text-blue-400 transition-colors"
               >
                 <MessageCircle size={20} />

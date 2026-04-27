@@ -4,6 +4,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import Navbar from "@/components/ui/shared/Navbar";
 import Footer from "@/components/ui/shared/Footer";
+import WhatsAppButton from "@/components/ui/shared/WhatsAppButton";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
@@ -35,6 +36,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <WhatsAppButton />
       </body>
     </html>
   );

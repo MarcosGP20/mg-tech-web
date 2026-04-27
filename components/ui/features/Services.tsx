@@ -1,11 +1,13 @@
 import {
   ShoppingBag,
   Layout,
-  Smartphone,
   Bot,
   ArrowRight,
   CalendarDays,
 } from "lucide-react";
+
+const WA_URL =
+  "https://wa.me/5493517692071?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios.";
 
 const cardStyles = {
   dark: {
@@ -130,7 +132,10 @@ export default function Services() {
                 <span className={`text-xs font-medium ${s.price}`}>
                   {service.price}
                 </span>
-                <button
+                <a
+                  href={WA_URL}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className={`flex items-center gap-1.5 text-sm font-medium transition-colors group ${s.cta}`}
                 >
                   {service.cta}
@@ -138,7 +143,7 @@ export default function Services() {
                     size={14}
                     className="transition-transform group-hover:translate-x-1"
                   />
-                </button>
+                </a>
               </div>
             </div>
           );
@@ -151,10 +156,15 @@ export default function Services() {
           ¿No sabés cuál elegir? Te ayudamos a decidir en una llamada de 15
           minutos.
         </p>
-        <button className="inline-flex items-center gap-2 bg-zinc-900 text-white px-7 py-3.5 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all hover:-translate-y-0.5">
+        <a
+          href={WA_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 bg-zinc-900 text-white px-7 py-3.5 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all hover:-translate-y-0.5"
+        >
           Consulta Gratis
           <ArrowRight size={15} />
-        </button>
+        </a>
         <p className="text-zinc-400 text-xs mt-3">
           Sin compromiso · Respondemos en menos de 24hs
         </p>

@@ -1,6 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, Terminal } from "lucide-react";
 
+const WA_URL =
+  "https://wa.me/5493517692071?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios.";
+
 export default function Hero() {
   return (
     <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden">
@@ -33,15 +36,19 @@ export default function Hero() {
           <Button
             size="lg"
             className="h-12 px-8 text-md font-semibold gap-2 shadow-lg shadow-blue-200"
+            asChild
           >
-            Hace tu consulta Gratis <ArrowRight size={18} />
+            <a href={WA_URL} target="_blank" rel="noopener noreferrer">
+              Hacé tu consulta Gratis <ArrowRight size={18} />
+            </a>
           </Button>
           <Button
             size="lg"
             variant="outline"
             className="h-12 px-8 text-md font-semibold"
+            asChild
           >
-            Ver casos de éxito
+            <a href="#portfolio">Ver casos de éxito</a>
           </Button>
         </div>
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-2">
