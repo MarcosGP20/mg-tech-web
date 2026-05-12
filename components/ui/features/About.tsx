@@ -1,5 +1,5 @@
 import Container from "../shared/Container";
-import { Users, Code2, Coffee } from "lucide-react";
+import { Users, Code2, ImageIcon } from "lucide-react";
 
 export default function About() {
   return (
@@ -46,15 +46,13 @@ export default function About() {
 
           {/* Lado Derecho: Imagen o Visual */}
           <div className="relative">
-            <div className="aspect-square bg-zinc-100 rounded-2xl overflow-hidden border border-zinc-200 shadow-inner flex items-center justify-center">
-              {/* Acá podés poner una foto de ustedes o una ilustración técnica */}
-              <Coffee size={100} className="text-zinc-300 animate-pulse" />
-              <p className="absolute bottom-4 text-zinc-400 text-xs italic">
-                Cocinando soluciones digitales...
-              </p>
+            {/* ▼ REEMPLAZÁ este bloque por tu foto cuando la tengas */}
+            <div className="aspect-square bg-zinc-100 rounded-2xl overflow-hidden border-2 border-dashed border-zinc-300 flex flex-col items-center justify-center gap-3">
+              <ImageIcon size={48} className="text-zinc-300" />
+              <p className="text-zinc-400 text-sm font-medium">Tu foto acá</p>
+              <p className="text-zinc-300 text-xs">Reemplazá este bloque en About.tsx</p>
             </div>
 
-            {/* Un pequeño badge flotante */}
             <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-xl border border-zinc-100 hidden md:block">
               <p className="text-2xl font-bold text-blue-600">+2 años</p>
               <p className="text-sm text-zinc-500 font-medium">
