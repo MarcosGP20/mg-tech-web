@@ -1,3 +1,4 @@
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 import {
   ShoppingBag,
   Layout,
@@ -5,9 +6,6 @@ import {
   ArrowRight,
   CalendarDays,
 } from "lucide-react";
-
-const WA_URL =
-  "https://wa.me/5493517692071?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios.";
 
 const cardStyles = {
   dark: {
@@ -49,6 +47,7 @@ const services = [
     cta: "Quiero esto",
     variant: "dark" as const,
     badge: "Más popular",
+    message: "Hola, me interesa automatizar mi negocio por WhatsApp.",
   },
   {
     title: "Agenda digital para tu negocio",
@@ -59,6 +58,7 @@ const services = [
     cta: "Quiero esto",
     variant: "accent" as const,
     badge: "Nuevo",
+    message: "Hola, me interesa una agenda digital para mi negocio.",
   },
   {
     title: "Tienda online simple",
@@ -69,6 +69,7 @@ const services = [
     cta: "Quiero esto",
     variant: "default" as const,
     badge: null,
+    message: "Hola, me interesa una tienda online simple.",
   },
   {
     title: "Catálogo profesional por WhatsApp",
@@ -79,6 +80,7 @@ const services = [
     cta: "Ver ejemplo",
     variant: "default" as const,
     badge: null,
+    message: "Hola, me interesa un catálogo profesional por WhatsApp.",
   },
 ];
 
@@ -133,7 +135,7 @@ export default function Services() {
                   {service.price}
                 </span>
                 <a
-                  href={WA_URL}
+                  href={getWhatsAppUrl(service.message)}
                   target="_blank"
                   rel="noopener noreferrer"
                   className={`flex items-center gap-1.5 text-sm font-medium transition-colors group ${s.cta}`}
@@ -150,19 +152,18 @@ export default function Services() {
         })}
       </div>
 
-      {/* Bottom CTA */}
       <div className="flex flex-col items-center mt-14 text-center">
         <p className="text-zinc-500 text-sm mb-5">
           ¿No sabés cuál elegir? Te ayudamos a decidir en una llamada de 15
           minutos.
         </p>
         <a
-          href={WA_URL}
+          href={getWhatsAppUrl()}
           target="_blank"
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-zinc-900 text-white px-7 py-3.5 rounded-xl text-sm font-medium hover:bg-zinc-800 transition-all hover:-translate-y-0.5"
         >
-          Consulta Gratis
+          Consulta gratis
           <ArrowRight size={15} />
         </a>
         <p className="text-zinc-400 text-xs mt-3">
@@ -172,3 +173,4 @@ export default function Services() {
     </section>
   );
 }
+

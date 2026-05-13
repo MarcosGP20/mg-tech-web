@@ -1,12 +1,12 @@
 import { MessageCircle } from "lucide-react";
-
-const WA_URL =
-  "https://wa.me/5493517692071?text=Hola%2C%20me%20interesa%20saber%20m%C3%A1s%20sobre%20sus%20servicios.";
+import { getWhatsAppUrl } from "@/lib/whatsapp";
 
 export default function WhatsAppButton() {
+  const whatsappUrl = getWhatsAppUrl();
+
   return (
     <a
-      href={WA_URL}
+      href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Contactar por WhatsApp"
@@ -19,3 +19,4 @@ export default function WhatsAppButton() {
     </a>
   );
 }
+

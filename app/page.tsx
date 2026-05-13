@@ -3,7 +3,6 @@ import Hero from "@/components/ui/features/Hero";
 import ProjectCard from "@/components/ui/features/ProjectCard";
 import Services from "@/components/ui/features/Services";
 import About from "@/components/ui/features/About";
-import Testimonials from "@/components/ui/features/Testimonials";
 
 export default function Home() {
   return (
@@ -38,9 +37,9 @@ export default function Home() {
             />
           </div>
         </section>
-        <Testimonials />
         <About />
       </Container>
     </main>
   );
 }
+

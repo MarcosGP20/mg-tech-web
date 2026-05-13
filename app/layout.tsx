@@ -19,8 +19,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "MG Tech",
-  description: "Sistemas webs, automatizaciones, ecommerce y mas",
+  title: "MG Tech | Sistemas web y automatizaciones para pymes",
+  description:
+    "Sistemas web, automatizaciones, ecommerce y soluciones digitales para negocios que quieren vender más.",
 };
 
 export default function RootLayout({
@@ -29,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={cn("font-sans", inter.variable)}>
+    <html lang="es" className={cn("font-sans", inter.variable)}>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
