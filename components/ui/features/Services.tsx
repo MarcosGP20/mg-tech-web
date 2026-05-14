@@ -1,3 +1,4 @@
+import Reveal from "@/components/ui/motion/Reveal";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 import {
   ArrowRight,
@@ -93,7 +94,7 @@ const styles = {
 export default function Services() {
   return (
     <section id="servicios" className="py-20 bg-zinc-50">
-      <div className="flex flex-col items-center text-center mb-12">
+      <Reveal className="flex flex-col items-center text-center mb-12">
         <p className="text-blue-600 text-sm font-medium uppercase tracking-widest mb-3">
           Nuestros servicios
         </p>
@@ -104,76 +105,77 @@ export default function Services() {
           Elegí una solución concreta para ordenar consultas, recibir pedidos o
           dejar de responder todo manualmente.
         </p>
-      </div>
+      </Reveal>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        {services.map((service) => {
+        {services.map((service, index) => {
           const s = styles[service.tone as keyof typeof styles];
           const Icon = service.icon;
 
           return (
-            <article
-              key={service.title}
-              className={`relative border rounded-lg p-7 md:p-8 flex flex-col min-h-[520px] transition-all hover:-translate-y-1 hover:shadow-2xl ${s.card}`}
-            >
-              <div className="flex items-start justify-between gap-4 mb-8">
-                <div
-                  className={`w-12 h-12 rounded-lg flex items-center justify-center ${s.icon}`}
-                >
-                  <Icon size={24} />
-                </div>
-                <span
-                  className={`rounded-full px-3 py-1 text-xs font-semibold ${s.badge}`}
-                >
-                  {service.badge}
-                </span>
-              </div>
-
-              <div>
-                <h3 className="text-2xl font-bold tracking-tight">
-                  {service.title}
-                </h3>
-                <p className={`mt-3 text-sm leading-relaxed ${s.subtitle}`}>
-                  {service.subtitle}
-                </p>
-              </div>
-
-              <div className={`mt-6 rounded-lg p-4 text-sm ${s.outcome}`}>
-                {service.outcome}
-              </div>
-
-              <ul className="mt-6 space-y-3 flex-1">
-                {service.features.map((feature) => (
-                  <li
-                    key={feature}
-                    className={`flex items-start gap-2 text-sm ${s.feature}`}
+            <Reveal key={service.title} delay={index * 120} hover="lift">
+              <article
+                className={`relative border rounded-lg p-7 md:p-8 flex flex-col min-h-[520px] transition-shadow duration-300 hover:shadow-2xl ${s.card}`}
+              >
+                <div className="flex items-start justify-between gap-4 mb-8">
+                  <div
+                    className={`w-12 h-12 rounded-lg flex items-center justify-center ${s.icon}`}
                   >
-                    <CheckCircle2 size={17} className="mt-0.5 shrink-0" />
-                    <span>{feature}</span>
-                  </li>
-                ))}
-              </ul>
+                    <Icon size={24} />
+                  </div>
+                  <span
+                    className={`rounded-full px-3 py-1 text-xs font-semibold ${s.badge}`}
+                  >
+                    {service.badge}
+                  </span>
+                </div>
 
-              <div className="mt-8 pt-6 border-t border-current/10">
-                <p className={`text-xl md:text-2xl font-bold ${s.price}`}>
-                  {service.price}
-                </p>
-                <a
-                  href={getWhatsAppUrl(service.message)}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-colors ${s.button}`}
-                >
-                  Consultar por WhatsApp
-                  <ArrowRight size={17} />
-                </a>
-              </div>
-            </article>
+                <div>
+                  <h3 className="text-2xl font-bold tracking-tight">
+                    {service.title}
+                  </h3>
+                  <p className={`mt-3 text-sm leading-relaxed ${s.subtitle}`}>
+                    {service.subtitle}
+                  </p>
+                </div>
+
+                <div className={`mt-6 rounded-lg p-4 text-sm ${s.outcome}`}>
+                  {service.outcome}
+                </div>
+
+                <ul className="mt-6 space-y-3 flex-1">
+                  {service.features.map((feature) => (
+                    <li
+                      key={feature}
+                      className={`flex items-start gap-2 text-sm ${s.feature}`}
+                    >
+                      <CheckCircle2 size={17} className="mt-0.5 shrink-0" />
+                      <span>{feature}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-8 pt-6 border-t border-current/10">
+                  <p className={`text-xl md:text-2xl font-bold ${s.price}`}>
+                    {service.price}
+                  </p>
+                  <a
+                    href={getWhatsAppUrl(service.message)}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className={`mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-colors ${s.button}`}
+                  >
+                    Consultar por WhatsApp
+                    <ArrowRight size={17} />
+                  </a>
+                </div>
+              </article>
+            </Reveal>
           );
         })}
       </div>
 
-      <div className="flex flex-col items-center mt-12 text-center">
+      <Reveal className="flex flex-col items-center mt-12 text-center">
         <p className="text-zinc-500 text-sm mb-5">
           ¿No sabés cuál elegir? Te ayudamos a decidir en una llamada de 15
           minutos.
@@ -190,7 +192,8 @@ export default function Services() {
         <p className="text-zinc-400 text-xs mt-3">
           Sin compromiso · Respondemos en menos de 24hs
         </p>
-      </div>
+      </Reveal>
     </section>
   );
 }
+

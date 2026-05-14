@@ -1,3 +1,4 @@
+import Reveal from "@/components/ui/motion/Reveal";
 import { CheckCircle2, XCircle } from "lucide-react";
 
 const beforeItems = [
@@ -18,7 +19,7 @@ export default function BeforeAfter() {
   return (
     <section className="py-20">
       <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-10 items-start">
-        <div>
+        <Reveal>
           <p className="text-blue-600 text-sm font-medium uppercase tracking-widest mb-3">
             Antes / Después
           </p>
@@ -30,43 +31,50 @@ export default function BeforeAfter() {
             responder mejor, ordenar consultas y convertir más visitas en
             clientes.
           </p>
-        </div>
+        </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
-          <div className="rounded-lg border border-red-100 bg-red-50/60 p-6">
-            <div className="flex items-center gap-2 mb-5">
-              <XCircle size={20} className="text-red-500" />
-              <h3 className="font-bold text-zinc-900">Antes</h3>
+          <Reveal delay={80} hover="soft">
+            <div className="rounded-lg border border-red-100 bg-red-50/60 p-6 h-full">
+              <div className="flex items-center gap-2 mb-5">
+                <XCircle size={20} className="text-red-500" />
+                <h3 className="font-bold text-zinc-900">Antes</h3>
+              </div>
+              <ul className="space-y-4">
+                {beforeItems.map((item) => (
+                  <li
+                    key={item}
+                    className="text-sm leading-relaxed text-zinc-600"
+                  >
+                    {item}
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="space-y-4">
-              {beforeItems.map((item) => (
-                <li key={item} className="text-sm leading-relaxed text-zinc-600">
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
+          </Reveal>
 
-          <div className="rounded-lg border border-emerald-100 bg-emerald-50/70 p-6 shadow-lg shadow-emerald-100/70">
-            <div className="flex items-center gap-2 mb-5">
-              <CheckCircle2 size={20} className="text-emerald-600" />
-              <h3 className="font-bold text-zinc-900">Después</h3>
+          <Reveal delay={180} hover="soft">
+            <div className="rounded-lg border border-emerald-100 bg-emerald-50/70 p-6 shadow-lg shadow-emerald-100/70 h-full">
+              <div className="flex items-center gap-2 mb-5">
+                <CheckCircle2 size={20} className="text-emerald-600" />
+                <h3 className="font-bold text-zinc-900">Después</h3>
+              </div>
+              <ul className="space-y-4">
+                {afterItems.map((item) => (
+                  <li
+                    key={item}
+                    className="flex gap-2 text-sm leading-relaxed text-zinc-700"
+                  >
+                    <CheckCircle2
+                      size={16}
+                      className="mt-0.5 shrink-0 text-emerald-600"
+                    />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <ul className="space-y-4">
-              {afterItems.map((item) => (
-                <li
-                  key={item}
-                  className="flex gap-2 text-sm leading-relaxed text-zinc-700"
-                >
-                  <CheckCircle2
-                    size={16}
-                    className="mt-0.5 shrink-0 text-emerald-600"
-                  />
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
+          </Reveal>
         </div>
       </div>
     </section>

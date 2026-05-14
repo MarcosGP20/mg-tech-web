@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { MotionGroup, MotionItem } from "@/components/ui/motion/MotionGroup";
 import { getWhatsAppUrl } from "@/lib/whatsapp";
 import { ArrowRight, CheckCircle2, Terminal } from "lucide-react";
 
@@ -11,26 +12,32 @@ export default function Hero() {
         <div className="absolute top-[-10%] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-blue-50/50 rounded-full blur-[120px]" />
       </div>
 
-      <div className="flex flex-col items-center text-center">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 border border-zinc-200 text-zinc-600 text-xs font-medium mb-8 animate-fade-in">
-          <Terminal size={14} />
-          <span>Ingeniería de Software para PYMEs</span>
-        </div>
+      <MotionGroup className="flex flex-col items-center text-center">
+        <MotionItem>
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 border border-zinc-200 text-zinc-600 text-xs font-medium mb-8">
+            <Terminal size={14} />
+            <span>Ingeniería de Software para PYMEs</span>
+          </div>
+        </MotionItem>
 
-        <h1 className="text-4xl md:text-7xl font-extrabold tracking-tight text-zinc-900 max-w-4xl mb-6">
-          Sistemas web que <br />
-          <span className="text-blue-900">venden por vos.</span>
-        </h1>
+        <MotionItem>
+          <h1 className="text-4xl md:text-7xl font-extrabold tracking-tight text-zinc-900 max-w-4xl mb-6">
+            Sistemas web que <br />
+            <span className="text-blue-900">venden por vos.</span>
+          </h1>
+        </MotionItem>
 
-        <p className="text-lg md:text-xl text-zinc-600 max-w-2xl mb-10 leading-relaxed">
-          Más clientes, menos trabajo manual. Sistemas web que trabajan por vos
-          las 24hs.
-        </p>
+        <MotionItem>
+          <p className="text-lg md:text-xl text-zinc-600 max-w-2xl mb-10 leading-relaxed">
+            Más clientes, menos trabajo manual. Sistemas web que trabajan por
+            vos las 24hs.
+          </p>
+        </MotionItem>
 
-        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4">
+        <MotionItem className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4">
           <Button
             size="lg"
-            className="h-12 px-8 text-md font-semibold gap-2 shadow-lg shadow-blue-200"
+            className="h-12 px-8 text-md font-semibold gap-2 shadow-lg shadow-blue-200 hover:-translate-y-0.5"
             asChild
           >
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
@@ -40,13 +47,14 @@ export default function Hero() {
           <Button
             size="lg"
             variant="outline"
-            className="h-12 px-8 text-md font-semibold"
+            className="h-12 px-8 text-md font-semibold hover:-translate-y-0.5"
             asChild
           >
             <a href="#portfolio">Ver casos de éxito</a>
           </Button>
-        </div>
-        <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-2">
+        </MotionItem>
+
+        <MotionItem className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-2">
           <p className="text-xs text-zinc-500 flex items-center gap-1.5">
             <CheckCircle2 size={14} className="text-emerald-500" />
             100% sin compromiso
@@ -55,8 +63,9 @@ export default function Hero() {
             <CheckCircle2 size={14} className="text-emerald-500" />
             Respuesta en menos de 24hs
           </p>
-        </div>
-      </div>
+        </MotionItem>
+      </MotionGroup>
     </section>
   );
 }
+
