@@ -10,7 +10,8 @@ import {
 const services = [
   {
     title: "WhatsApp automático",
-    subtitle: "Para responder, filtrar consultas y vender mientras trabajás.",
+    subtitle:
+      "Para responder automáticamente, filtrar consultas y vender mientras trabajás.",
     icon: Bot,
     price: "Desde $35.000/mes",
     badge: "Más elegido",
@@ -25,7 +26,7 @@ const services = [
   },
   {
     title: "Agenda digital",
-    subtitle: "Para que tus clientes reserven turnos sin escribirte todo el día.",
+    subtitle: "Tus clientes van a reservar turnos sin escribirte todo el día.",
     icon: CalendarDays,
     price: "Desde $30.000/mes",
     badge: "Nuevo",
@@ -40,7 +41,8 @@ const services = [
   },
   {
     title: "Tienda o catálogo online",
-    subtitle: "Para mostrar productos, recibir pedidos y mandar un link profesional.",
+    subtitle:
+      "Para mostrar tus productos, recibir pedidos y generar ventas 24/7.",
     icon: ShoppingBag,
     price: "Desde $45.000/mes",
     badge: "Ventas online",

@@ -12,9 +12,9 @@ export default function About() {
             </h2>
             <p className="text-lg text-zinc-600 leading-relaxed">
               Somos un equipo de desarrolladores apasionados por la tecnología y
-              el crecimiento de los negocios locales. Fundamos MG Tech para
-              cerrar la brecha entre las PYMEs y las herramientas digitales de
-              alto nivel.
+              la creacion de soluciones digitales. Fundamos MG Tech para cerrar
+              la brecha entre las PYMEs y las herramientas digitales de alto
+              nivel.
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 pt-4">
@@ -25,7 +25,7 @@ export default function About() {
                 <div>
                   <h4 className="font-bold text-zinc-900">Ingeniería real</h4>
                   <p className="text-sm text-zinc-500">
-                    No usamos plantillas. Construimos sistemas sólidos.
+                    No usamos plantillas. Construimos sistemas sólidos a medida.
                   </p>
                 </div>
               </div>
@@ -36,7 +36,7 @@ export default function About() {
                 <div>
                   <h4 className="font-bold text-zinc-900">Cercanía</h4>
                   <p className="text-sm text-zinc-500">
-                    Estamos en Córdoba. Soporte directo y sin vueltas.
+                    Estamos ubicados en Córdoba. Soporte directo en horas.
                   </p>
                 </div>
               </div>
@@ -71,8 +71,8 @@ export default function About() {
                     Acompañamiento directo
                   </h3>
                   <p className="text-sm text-zinc-600 mt-2 leading-relaxed">
-                    Te acompañamos después del lanzamiento para ajustar,
-                    mejorar y mantener funcionando lo que el negocio necesita.
+                    Te acompañamos después del lanzamiento para ajustar, mejorar
+                    y mantener funcionando lo que el negocio necesita.
                   </p>
                 </div>
               </div>
@@ -98,4 +98,3 @@ export default function About() {
     </section>
   );
 }
-

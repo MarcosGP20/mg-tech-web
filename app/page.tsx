@@ -24,7 +24,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <ProjectCard
-              title="Tienda online WaveArg"
+              title="Ecommerce WaveArg"
               description="Tienda online completa con catálogo de productos, carrito de compras y pasarela de pagos."
               tags={["Tienda online", "Pagos integrados", "Atiende 24hs"]}
               imageUrl="/wavearg.png"
@@ -44,4 +44,3 @@ export default function Home() {
     </main>
   );
 }
-
