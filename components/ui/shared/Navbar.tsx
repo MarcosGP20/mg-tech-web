@@ -38,7 +38,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4">
             <Button variant="default" size="sm" className="hidden sm:flex" asChild>
               <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-                Consulta gratis
+                Diagnóstico gratis
               </a>
             </Button>
           </div>
@@ -47,4 +47,3 @@ export default function Navbar() {
     </nav>
   );
 }
-

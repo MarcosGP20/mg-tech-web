@@ -10,15 +10,15 @@ import {
 
 const services = [
   {
-    title: "WhatsApp automático",
+    title: "Automatización de consultas",
     subtitle:
-      "Para responder automáticamente, filtrar consultas y vender mientras trabajás.",
+      "Para responder preguntas frecuentes, filtrar interesados y derivar solo los casos importantes.",
     icon: Bot,
     price: "Desde $35.000/mes",
     badge: "Más elegido",
     tone: "dark",
     message: "Hola, me interesa automatizar mi negocio por WhatsApp.",
-    outcome: "Menos mensajes manuales, más consultas atendidas a tiempo.",
+    outcome: "Menos mensajes repetidos, más consultas atendidas a tiempo.",
     features: [
       "Respuestas automáticas",
       "Derivación a atención humana",
@@ -26,8 +26,9 @@ const services = [
     ],
   },
   {
-    title: "Agenda digital",
-    subtitle: "Tus clientes van a reservar turnos sin escribirte todo el día.",
+    title: "Reservas online",
+    subtitle:
+      "Tus clientes eligen día y horario sin escribirte todo el día por WhatsApp.",
     icon: CalendarDays,
     price: "Desde $30.000/mes",
     badge: "Nuevo",
@@ -43,7 +44,7 @@ const services = [
   {
     title: "Tienda o catálogo online",
     subtitle:
-      "Para mostrar tus productos, recibir pedidos y generar ventas 24/7.",
+      "Para mostrar productos, recibir pedidos por WhatsApp o sumar pagos online cuando el negocio lo necesite.",
     icon: ShoppingBag,
     price: "Desde $45.000/mes",
     badge: "Ventas online",
@@ -52,7 +53,7 @@ const services = [
     outcome: "Tu negocio visible, ordenado y listo para vender todos los días.",
     features: [
       "Catálogo de productos",
-      "Pedidos o consultas por WhatsApp",
+      "Pedidos por WhatsApp o pagos online",
       "Diseño responsive y profesional",
     ],
   },
@@ -99,11 +100,11 @@ export default function Services() {
           Nuestros servicios
         </p>
         <h2 className="text-3xl md:text-4xl font-bold text-zinc-900">
-          Tres formas simples de vender más
+          Soluciones concretas para vender y atender mejor
         </h2>
         <p className="text-zinc-500 mt-4 max-w-2xl text-sm md:text-base leading-relaxed">
-          Elegí una solución concreta para ordenar consultas, recibir pedidos o
-          dejar de responder todo manualmente.
+          Elegí un punto de partida claro para ordenar consultas, recibir
+          pedidos o dejar de responder todo manualmente.
         </p>
       </Reveal>
 
@@ -165,7 +166,7 @@ export default function Services() {
                     rel="noopener noreferrer"
                     className={`mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-colors ${s.button}`}
                   >
-                    Consultar por WhatsApp
+                    Quiero esta solución
                     <ArrowRight size={17} />
                   </a>
                 </div>
@@ -177,8 +178,8 @@ export default function Services() {
 
       <Reveal className="flex flex-col items-center mt-12 text-center">
         <p className="text-zinc-500 text-sm mb-5">
-          ¿No sabés cuál elegir? Te ayudamos a decidir en una llamada de 15
-          minutos.
+          ¿No sabés cuál elegir? Revisamos tu caso y te recomendamos por dónde
+          empezar.
         </p>
         <a
           href={getWhatsAppUrl()}
@@ -186,7 +187,7 @@ export default function Services() {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-2 bg-zinc-900 text-white px-7 py-3.5 rounded-lg text-sm font-medium hover:bg-zinc-800 transition-all hover:-translate-y-0.5"
         >
-          Consulta gratis
+          Diagnosticar mi negocio gratis
           <ArrowRight size={15} />
         </a>
         <p className="text-zinc-400 text-xs mt-3">
@@ -196,4 +197,3 @@ export default function Services() {
     </section>
   );
 }
-

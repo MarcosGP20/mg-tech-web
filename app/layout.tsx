@@ -21,7 +21,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "MG Tech | Sistemas web y automatizaciones para pymes",
   description:
-    "Sistemas web, automatizaciones, ecommerce y soluciones digitales para negocios que quieren vender más.",
+    "Automatización de consultas, reservas online, ecommerce y sistemas web para negocios que quieren vender más con menos trabajo manual.",
 };
 
 export default function RootLayout({

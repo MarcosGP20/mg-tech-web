@@ -1,8 +1,7 @@
 const WHATSAPP_NUMBER = "5493517692071";
 const DEFAULT_MESSAGE =
-  "Hola, me interesa saber más sobre los servicios de MG Tech.";
+  "Hola Marcos! Vi su página y me interesa digitalizar mi negocio. 💻 ¿ Me podrías dar más info sobre cómo trabajan y los tiempos de desarrollo?";
 
 export function getWhatsAppUrl(message = DEFAULT_MESSAGE) {
   return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
 }
-

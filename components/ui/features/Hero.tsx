@@ -4,7 +4,9 @@ import { getWhatsAppUrl } from "@/lib/whatsapp";
 import { ArrowRight, CheckCircle2, Terminal } from "lucide-react";
 
 export default function Hero() {
-  const whatsappUrl = getWhatsAppUrl();
+  const whatsappUrl = getWhatsAppUrl(
+    "Hola, quiero un diagnóstico gratis para saber qué parte de mi negocio conviene automatizar."
+  );
 
   return (
     <section className="relative pt-20 pb-16 md:pt-32 md:pb-24 overflow-hidden">
@@ -16,7 +18,7 @@ export default function Hero() {
         <MotionItem>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-zinc-100 border border-zinc-200 text-zinc-600 text-xs font-medium mb-8">
             <Terminal size={14} />
-            <span>Ingeniería de Software para PYMEs</span>
+            <span>Automatización y sistemas web para PYMEs</span>
           </div>
         </MotionItem>
 
@@ -29,8 +31,8 @@ export default function Hero() {
 
         <MotionItem>
           <p className="text-lg md:text-xl text-zinc-600 max-w-2xl mb-10 leading-relaxed">
-            Más clientes, menos trabajo manual. Sistemas web que trabajan por
-            vos las 24hs.
+            Automatizamos consultas, turnos y ventas online para que tu negocio
+            atienda mejor sin depender de responder todo a mano.
           </p>
         </MotionItem>
 
@@ -41,7 +43,7 @@ export default function Hero() {
             asChild
           >
             <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
-              Hacé tu consulta gratis <ArrowRight size={18} />
+              Diagnosticar mi negocio gratis <ArrowRight size={18} />
             </a>
           </Button>
           <Button
@@ -57,7 +59,7 @@ export default function Hero() {
         <MotionItem className="flex flex-wrap justify-center gap-x-6 gap-y-2 mt-2">
           <p className="text-xs text-zinc-500 flex items-center gap-1.5">
             <CheckCircle2 size={14} className="text-emerald-500" />
-            100% sin compromiso
+            Te decimos qué automatizar primero
           </p>
           <p className="text-xs text-zinc-500 flex items-center gap-1.5">
             <CheckCircle2 size={14} className="text-emerald-500" />
@@ -68,4 +70,3 @@ export default function Hero() {
     </section>
   );
 }
-

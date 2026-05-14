@@ -23,9 +23,8 @@ export default function WhatsAppButton() {
     >
       <MessageCircle size={22} className="shrink-0" />
       <span className="text-sm font-semibold max-w-0 overflow-hidden group-hover:max-w-xs transition-all duration-300 whitespace-nowrap">
-        ¡Hablemos!
+        Diagnóstico gratis
       </span>
     </motion.a>
   );
 }
-

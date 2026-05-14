@@ -15,8 +15,8 @@ export default function Footer() {
               MG<span className="text-blue-500">Tech</span>
             </h3>
             <p className="text-sm leading-relaxed max-w-xs">
-              Potenciamos negocios locales con tecnología de alto nivel.
-              Sistemas que trabajan para vos.
+              Automatizamos consultas, turnos y ventas para que tu negocio
+              trabaje mejor sin sumar tareas manuales.
             </p>
           </div>
 
@@ -59,7 +59,7 @@ export default function Footer() {
               className="inline-flex items-center gap-2 rounded-full bg-zinc-900 px-4 py-2 text-sm text-zinc-200 hover:text-blue-400 transition-colors"
             >
               <MessageCircle size={18} />
-              WhatsApp
+              Diagnóstico gratis
             </a>
             <p className="text-xs">Ubicados en Córdoba, Argentina</p>
           </div>
