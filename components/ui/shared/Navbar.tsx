@@ -22,10 +22,16 @@ export default function Navbar() {
               Servicios
             </Link>
             <Link
+              href="#proceso"
+              className="hover:text-blue-900 transition-colors"
+            >
+              Proceso
+            </Link>
+            <Link
               href="#portfolio"
               className="hover:text-blue-900 transition-colors"
             >
-              Portfolio
+              Casos
             </Link>
             <Link
               href="#nosotros"

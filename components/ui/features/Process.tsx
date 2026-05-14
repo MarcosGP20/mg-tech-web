@@ -26,7 +26,7 @@ export default function Process() {
   );
 
   return (
-    <section className="py-20">
+    <section id="proceso" className="py-20">
       <div className="grid grid-cols-1 lg:grid-cols-[0.85fr_1.15fr] gap-10 items-start">
         <Reveal>
           <p className="text-blue-600 text-sm font-medium uppercase tracking-widest mb-3">
@@ -84,4 +84,3 @@ export default function Process() {
     </section>
   );
 }
-

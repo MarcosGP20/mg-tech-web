@@ -33,7 +33,7 @@ const services = [
     price: "Desde $30.000/mes",
     badge: "Nuevo",
     tone: "blue",
-    message: "Hola, me interesa una agenda digital para mi negocio.",
+    message: "Hola, me interesa implementar reservas online para mi negocio.",
     outcome: "Turnos ordenados y menos ida y vuelta por WhatsApp.",
     features: [
       "Reservas online 24hs",
@@ -169,6 +169,9 @@ export default function Services() {
                     Quiero esta solución
                     <ArrowRight size={17} />
                   </a>
+                  <p className={`mt-3 text-xs leading-relaxed ${s.feature}`}>
+                    Primero revisamos si aplica a tu negocio.
+                  </p>
                 </div>
               </article>
             </Reveal>

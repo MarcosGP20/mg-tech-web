@@ -33,6 +33,7 @@ export default function ProjectCard({
           src={imageUrl}
           alt={title}
           fill
+          sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
           className="object-cover group-hover:scale-105 transition-transform duration-500"
         />
       </div>
@@ -57,16 +58,18 @@ export default function ProjectCard({
       </CardContent>
 
       <CardFooter className="px-5 pb-6 pt-0">
-        <Button
-          variant="outline"
-          size="sm"
-          className="w-full gap-2 text-xs font-semibold"
-          asChild
-        >
-          <a href={projectUrl} target="_blank" rel="noopener noreferrer">
-            Ver Proyecto <ExternalLink size={14} />
-          </a>
-        </Button>
+        {projectUrl ? (
+          <Button
+            variant="outline"
+            size="sm"
+            className="w-full gap-2 text-xs font-semibold"
+            asChild
+          >
+            <a href={projectUrl} target="_blank" rel="noopener noreferrer">
+              Ver proyecto <ExternalLink size={14} />
+            </a>
+          </Button>
+        ) : null}
       </CardFooter>
     </Card>
   );

@@ -13,7 +13,7 @@ export default function WhatsAppButton() {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="Contactar por WhatsApp"
+      aria-label="Pedir diagnóstico gratis por WhatsApp"
       className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50 flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white p-3 sm:px-4 sm:py-3 rounded-full shadow-lg hover:shadow-xl transition-colors group"
       initial={reduceMotion ? false : { opacity: 0, scale: 0.75, y: 16 }}
       animate={reduceMotion ? undefined : { opacity: 1, scale: 1, y: 0 }}

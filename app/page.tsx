@@ -4,6 +4,7 @@ import ProjectCard from "@/components/ui/features/ProjectCard";
 import Services from "@/components/ui/features/Services";
 import BeforeAfter from "@/components/ui/features/BeforeAfter";
 import About from "@/components/ui/features/About";
+import FinalCTA from "@/components/ui/features/FinalCTA";
 import Process from "@/components/ui/features/Process";
 import TrustSignals from "@/components/ui/features/TrustSignals";
 import Reveal from "@/components/ui/motion/Reveal";
@@ -50,6 +51,7 @@ export default function Home() {
           </div>
         </section>
         <About />
+        <FinalCTA />
       </Container>
     </main>
   );
