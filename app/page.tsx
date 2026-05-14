@@ -24,8 +24,8 @@ export default function Home() {
               Proyectos reales en producción
             </h2>
             <p className="text-zinc-500 mt-2">
-              Casos implementados para negocios que necesitaban vender,
-              atender o presentarse mejor.
+              Casos implementados para negocios que necesitaban vender, atender
+              o presentarse mejor.
             </p>
           </Reveal>
 
@@ -33,19 +33,19 @@ export default function Home() {
             <Reveal delay={80} hover="lift">
               <ProjectCard
                 title="Ecommerce WaveArg"
-                description="Tienda online con catálogo, carrito y pagos integrados para ordenar la venta digital."
+                description="Tienda online orientada a mostrar productos, ordenar el catálogo y facilitar la compra desde una experiencia simple."
+                contribution="Diseñamos e implementamos un comercio totalmente digital para la venta de iPhones, con catálogo, carrito y pagos integrados para generar ventas durante todo el día."
                 tags={["Tienda online", "Pagos integrados", "Atiende 24hs"]}
                 imageUrl="/wavearg.png"
-                projectUrl="https://wavearg-front.vercel.app/"
               />
             </Reveal>
             <Reveal delay={180} hover="lift">
               <ProjectCard
                 title="Página web Invicto 3D"
-                description="Sitio profesional para presentar servicios de impresión 3D y generar consultas comerciales."
+                description="Sitio profesional para un estudio de impresión 3D que necesitaba presentar servicios, generar confianza y recibir consultas."
+                contribution="Creamos y diseñamos una página pensada para transformar visitas en ventas mayoristas, mostrando el trabajo del negocio de forma clara y profesional."
                 tags={["Página web", "Diseño profesional", "Genera consultas"]}
                 imageUrl="/invicto.png"
-                projectUrl="https://invicto-3d.vercel.app/"
               />
             </Reveal>
           </div>

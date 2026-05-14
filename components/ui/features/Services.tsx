@@ -14,7 +14,6 @@ const services = [
     subtitle:
       "Para responder preguntas frecuentes, filtrar interesados y derivar solo los casos importantes.",
     icon: Bot,
-    price: "Desde $35.000/mes",
     badge: "Más elegido",
     tone: "dark",
     message: "Hola, me interesa automatizar mi negocio por WhatsApp.",
@@ -30,7 +29,6 @@ const services = [
     subtitle:
       "Tus clientes eligen día y horario sin escribirte todo el día por WhatsApp.",
     icon: CalendarDays,
-    price: "Desde $30.000/mes",
     badge: "Nuevo",
     tone: "blue",
     message: "Hola, me interesa implementar reservas online para mi negocio.",
@@ -46,7 +44,6 @@ const services = [
     subtitle:
       "Para mostrar productos, recibir pedidos por WhatsApp o sumar pagos online cuando el negocio lo necesite.",
     icon: ShoppingBag,
-    price: "Desde $45.000/mes",
     badge: "Ventas online",
     tone: "light",
     message: "Hola, me interesa una tienda o catálogo online para mi negocio.",
@@ -67,7 +64,6 @@ const styles = {
     subtitle: "text-zinc-300",
     outcome: "bg-white/10 text-zinc-100",
     feature: "text-zinc-300",
-    price: "text-white",
     button: "bg-white text-zinc-950 hover:bg-zinc-100",
   },
   blue: {
@@ -77,7 +73,6 @@ const styles = {
     subtitle: "text-blue-50",
     outcome: "bg-white/15 text-white",
     feature: "text-blue-50",
-    price: "text-white",
     button: "bg-white text-blue-700 hover:bg-blue-50",
   },
   light: {
@@ -87,7 +82,6 @@ const styles = {
     subtitle: "text-zinc-600",
     outcome: "bg-zinc-50 text-zinc-700",
     feature: "text-zinc-600",
-    price: "text-zinc-950",
     button: "bg-zinc-950 text-white hover:bg-zinc-800",
   },
 };
@@ -157,14 +151,11 @@ export default function Services() {
                 </ul>
 
                 <div className="mt-8 pt-6 border-t border-current/10">
-                  <p className={`text-xl md:text-2xl font-bold ${s.price}`}>
-                    {service.price}
-                  </p>
                   <a
                     href={getWhatsAppUrl(service.message)}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`mt-5 inline-flex w-full items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-colors ${s.button}`}
+                    className={`inline-flex w-full items-center justify-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold transition-colors ${s.button}`}
                   >
                     Quiero esta solución
                     <ArrowRight size={17} />

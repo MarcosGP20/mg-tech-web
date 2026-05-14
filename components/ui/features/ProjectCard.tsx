@@ -1,33 +1,25 @@
-import {
-  Card,
-  CardContent,
-  CardFooter,
-  CardHeader,
-} from "@/components/ui/card";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { ExternalLink } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 
-// Definimos la estructura de datos (Props)
 interface ProjectCardProps {
   title: string;
   description: string;
+  contribution: string;
   tags: string[];
   imageUrl: string;
-  projectUrl?: string;
 }
 
 export default function ProjectCard({
   title,
   description,
+  contribution,
   tags,
   imageUrl,
-  projectUrl,
 }: ProjectCardProps) {
   return (
     <Card className="overflow-hidden border-zinc-200 hover:shadow-xl transition-all duration-300 group">
-      {/* Imagen del Proyecto */}
       <div className="relative h-48 w-full overflow-hidden bg-zinc-100">
         <Image
           src={imageUrl}
@@ -53,24 +45,28 @@ export default function ProjectCard({
         <h3 className="text-xl font-bold text-zinc-900">{title}</h3>
       </CardHeader>
 
-      <CardContent className="px-5 pb-5">
-        <p className="text-sm text-zinc-600 leading-relaxed">{description}</p>
-      </CardContent>
+      <CardContent className="space-y-5 px-5 pb-6">
+        <div>
+          <p className="text-xs font-bold uppercase tracking-wider text-zinc-400">
+            Detalle del proyecto
+          </p>
+          <p className="mt-2 text-sm leading-relaxed text-zinc-600">
+            {description}
+          </p>
+        </div>
 
-      <CardFooter className="px-5 pb-6 pt-0">
-        {projectUrl ? (
-          <Button
-            variant="outline"
-            size="sm"
-            className="w-full gap-2 text-xs font-semibold"
-            asChild
-          >
-            <a href={projectUrl} target="_blank" rel="noopener noreferrer">
-              Ver proyecto <ExternalLink size={14} />
-            </a>
-          </Button>
-        ) : null}
-      </CardFooter>
+        <div className="rounded-lg bg-zinc-50 p-4">
+          <div className="flex items-center gap-2">
+            <CheckCircle2 size={17} className="shrink-0 text-emerald-600" />
+            <p className="text-xs font-bold uppercase tracking-wider text-zinc-500">
+              Aporte de MG Tech
+            </p>
+          </div>
+          <p className="mt-2 text-sm leading-relaxed text-zinc-700">
+            {contribution}
+          </p>
+        </div>
+      </CardContent>
     </Card>
   );
 }
